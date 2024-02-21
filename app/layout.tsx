@@ -4,6 +4,7 @@ import '@mantine/notifications/styles.css';
 import React from 'react';
 import { MantineProvider } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
+import { Analytics } from '@vercel/analytics/react';
 import { theme } from '@/theme';
 
 export const metadata = {
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme} defaultColorScheme="light">
+          <Analytics />
           <Notifications />
           {children}
         </MantineProvider>
