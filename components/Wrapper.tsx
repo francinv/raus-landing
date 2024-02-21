@@ -25,9 +25,9 @@ const Wrapper = () => (
         <Header />
       </AppShell.Header>
       <AppShell.Main>
-        <Article />
-        <Divider my="xl" />
         <Register />
+        <Divider my="xl" />
+        <Article />
         <ContactInformation />
       </AppShell.Main>
     </AppShell>
