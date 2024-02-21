@@ -3159,6 +3159,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sendgrid/client@npm:^8.1.1":
+  version: 8.1.1
+  resolution: "@sendgrid/client@npm:8.1.1"
+  dependencies:
+    "@sendgrid/helpers": "npm:^8.0.0"
+    axios: "npm:^1.6.4"
+  checksum: eb5034832d207fd00bd9c84618d7349c45beef27cec051da2705cb08e7e97c80baf01cd0050fb0fc7f8683995279234f46a9e01f05b76eebb94a987bf29edaf2
+  languageName: node
+  linkType: hard
+
+"@sendgrid/helpers@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@sendgrid/helpers@npm:8.0.0"
+  dependencies:
+    deepmerge: "npm:^4.2.2"
+  checksum: e7f341099c63915eb095102f8c7ec220a8f2fb66a0cd836ab91e7424005e7c5fd27b65e3a5ed43654f5b2b3608fa7d14ebba924ff86e5d0bdfeaf0248f836a50
+  languageName: node
+  linkType: hard
+
+"@sendgrid/mail@npm:^8.1.1":
+  version: 8.1.1
+  resolution: "@sendgrid/mail@npm:8.1.1"
+  dependencies:
+    "@sendgrid/client": "npm:^8.1.1"
+    "@sendgrid/helpers": "npm:^8.0.0"
+  checksum: de36fe55640ed686ae5a6513cc0890ceaac9ee1d7058b3771560828712a36c94f9c5ab4f4d3aa4998a0ba504dcffc82711f4915bfed333cafeeabe9aaf5e8e06
+  languageName: node
+  linkType: hard
+
 "@sinclair/typebox@npm:^0.27.8":
   version: 0.27.8
   resolution: "@sinclair/typebox@npm:0.27.8"
@@ -5980,6 +6009,17 @@ __metadata:
   version: 4.7.0
   resolution: "axe-core@npm:4.7.0"
   checksum: 89ac5712b5932ac7d23398b4cb5ba081c394a086e343acc68ba49c83472706e18e0799804e8388c779dcdacc465377deb29f2714241d3fbb389cf3a6b275c9ba
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.6.4":
+  version: 1.6.7
+  resolution: "axios@npm:1.6.7"
+  dependencies:
+    follow-redirects: "npm:^1.15.4"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 131bf8e62eee48ca4bd84e6101f211961bf6a21a33b95e5dfb3983d5a2fe50d9fffde0b57668d7ce6f65063d3dc10f2212cbcb554f75cfca99da1c73b210358d
   languageName: node
   linkType: hard
 
@@ -8929,6 +8969,16 @@ __metadata:
   version: 0.217.0
   resolution: "flow-parser@npm:0.217.0"
   checksum: 54658709add8028896b377548d6ec9ae6423ba8edb94ccbd9b81a54a0d5d2b893e453007bc7ea83da375833b216b9e5b89394274088a7644b2b2edc5816233bd
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.15.4":
+  version: 1.15.5
+  resolution: "follow-redirects@npm:1.15.5"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 418d71688ceaf109dfd6f85f747a0c75de30afe43a294caa211def77f02ef19865b547dfb73fde82b751e1cc507c06c754120b848fe5a7400b0a669766df7615
   languageName: node
   linkType: hard
 
@@ -12959,7 +13009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proxy-from-env@npm:^1.0.0":
+"proxy-from-env@npm:^1.0.0, proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
   checksum: fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
@@ -13156,6 +13206,7 @@ __metadata:
     "@mantine/notifications": "npm:^7.5.3"
     "@next/bundle-analyzer": "npm:^14.0.1"
     "@next/eslint-plugin-next": "npm:^14.0.1"
+    "@sendgrid/mail": "npm:^8.1.1"
     "@storybook/addon-essentials": "npm:^7.5.2"
     "@storybook/addon-styling-webpack": "npm:^0.0.5"
     "@storybook/blocks": "npm:^7.5.2"

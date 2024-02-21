@@ -1,5 +1,4 @@
 import {
-  Anchor,
   Autocomplete,
   Button,
   Checkbox,
@@ -20,6 +19,7 @@ import { MUNICIPALITIES, TASKS } from '@/constants';
 import { SelectDeal } from '@/components';
 import { RegisterForm } from '@/types';
 import { generateGoogleSheetUrl } from '@/util';
+import { sendMail } from '@/app/actions';
 
 const Register = () => {
   const form = useForm<RegisterForm>({
@@ -45,6 +45,10 @@ const Register = () => {
             await fetch(generateGoogleSheetUrl(values), {
               method: 'POST',
               mode: 'no-cors',
+            });
+            await sendMail({
+              name: values.name,
+              email: values.email,
             });
 
             form.reset();
@@ -175,9 +179,11 @@ const Register = () => {
               <>
                 Jeg samtykker til at Raus kan lagre og behandle mine personopplysninger for å tilby
                 meg hjelp.{' '}
+                {/*
                 <Anchor href="/personvern" target="_blank" rel="noopener noreferrer" size="md">
                   Les mer
                 </Anchor>
+                            */}
               </>
             }
             defaultChecked

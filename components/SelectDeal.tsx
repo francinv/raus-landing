@@ -28,7 +28,15 @@ const SelectDeal = ({ onChange }: SelectDealProps) => {
   };
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" w="50%" my="lg" mx="auto" withBorder>
+    <Card
+      shadow="sm"
+      padding="lg"
+      radius="md"
+      w={{ xs: '80%', sm: '60%', md: '50%' }}
+      my="lg"
+      mx="auto"
+      withBorder
+    >
       <Group justify="space-between" mt="md" mb="xs">
         <Text fw={500} size="xl">
           Pris per oppdrag:

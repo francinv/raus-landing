@@ -7,7 +7,7 @@ import { Notifications } from '@mantine/notifications';
 import { theme } from '@/theme';
 
 export const metadata = {
-  title: 'Raus - Vi hjelper deg og dine nærmeste.',
+  title: 'Raus - Vi lar ikke tidsklemma vinne!',
 };
 
 export default function RootLayout({ children }: { children: any }) {
