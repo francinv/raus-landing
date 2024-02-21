@@ -69,23 +69,23 @@ const Register = () => {
           }
         })}
       >
-        <Title order={2} className={montserrat.className}>
+        <Title order={2} className={montserrat.className} c="myGreen">
           Trenger din nærstående hjelp?
         </Title>
         <Text my="sm">
-          Raus tilbyr oppgavedeling til eldre som bor hjemme, men ikke er i stand til å utføre
-          gjøremål de har behov for å få gjort. Det kan være å måke oppkjørselen, gå en tur, kjøre
-          på butikken for å handle eller rydde kjøleskapet.
+          Vi tilbyr tjenester til eldre som bor hjemme, men ikke er i stand til å utføre gjøremål de
+          har behov for å få gjort. Det kan være å måke oppkjørselen, gå en tur, kjøre på butikken
+          for å handle eller få et hyggelig besøk.
         </Text>
-        <Text>
-          Dersom du er pårørende til noen som trenger en hjelpende hånd - registrer deg her!
+        <Text fw={500} c="myGreen">
+          Dersom du er pårørende til noen som trenger en hjelpende hånd - REGISTRER DEG HER!
         </Text>
         <Divider my="sm" />
-        <Title order={4} className={montserrat.className}>
+        <Title order={4} className={montserrat.className} c="myGreen">
           Velg ønsket hjelp
         </Title>
         <SelectDeal onChange={(number) => form.setFieldValue('amountOfTasks', number)} />
-        <Title order={4} className={montserrat.className}>
+        <Title order={4} className={montserrat.className} c="myGreen">
           Informasjon
         </Title>
         <Text size="sm" c="gray">
@@ -136,7 +136,7 @@ const Register = () => {
           </div>
         </SimpleGrid>
         <Divider my="xs" />
-        <Title order={6} className={montserrat.className}>
+        <Title order={6} className={montserrat.className} c="myGreen">
           Din kontaktinformasjon
         </Title>
 

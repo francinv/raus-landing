@@ -4,7 +4,7 @@ import PersonCard from '@/components/PersonCard';
 
 const ContactInformation = () => (
   <Container id="contact-information-section" size="lg" mt={64}>
-    <Title order={2} className={montserrat.className}>
+    <Title order={2} className={montserrat.className} c="myGreen">
       Hvem er vi?
     </Title>
     <SimpleGrid

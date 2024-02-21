@@ -13,20 +13,19 @@ const Article = () => (
       c="myGreen"
     />
     <Paragraph text="En arbeidshverdag i eldreomsorgen domineres av en uendelig liste med gjøremål og et umenneskelig tidspress. De ansatte står på for å komme gjennom dagens gjøremål, men sliter likevel med å få det til å gå rundt." />
-    <Paragraph text="Vi er Raus, et team på NTNUs Entreprenørskole som har dykket ned i problematikk knyttet til eldreomsorgen. I løpet av seks intense uker har vi tilegnet oss større forståelse for dagens omstendigheter gjennom å hospitere hos hjemmetjenester og sykehjem i Trondheim. Videre har vi gjennomført hundrevis av dybdeintervju med eldre, pårørende og pleiere, i tillegg til offentlige og private aktører." />
+    <Paragraph text="Vi er Raus, et team på NTNUs Entreprenørskole som har dykket ned i problematikk knyttet til eldreomsorgen. Vi har tilegnet oss større forståelse for dagens omstendigheter gjennom å hospitere hos hjemmetjenester og sykehjem i Trondheim. Videre har vi gjennomført hundrevis av dybdeintervju med eldre, pårørende og pleiere, i tillegg til offentlige og private aktører." />
     <Paragraph
       text="Det vi har observert har rystet vår forståelse av eldreomsorgen i dag - der effektivitet trumfer menneskelig kontakt."
       wantBold
       c="myGreen"
     />
-    <Paragraph text="Virkeligheten som har møtt oss er preget av dårlig tid, stress og en glemt sårbar gruppe. Da vi var på hospitering ble dagens siste besøk redusert til tre minutter. Tre minutter - den korte tiden mellom et raskt “hei og hadet”, en realitet der man så vidt rekker å ta av og på strømpene før man er på vei ut døren igjen. Dette er særlig frustrerende for de eldre." />
+    <Paragraph text="Virkeligheten som har møtt oss er preget av dårlig tid, stress og en glemt sårbar gruppe. Da vi var på hospitering ble flere av besøkene redusert ned til tre minutter. Tre minutter - den korte tiden mellom et raskt “hei og hadet”, en realitet der man så vidt rekker å ta av og på støttestrømpene før man er på vei ut døren igjen. Dette er særlig frustrerende for de eldre." />
     <Paragraph text="Det er en vesentlig forskjell mellom hva den eldre har krav på og hva han eller hun har behov for. Menneskelig tilstedeværelse, det viktigste aspektet ved omsorg, forsvinner." />
     <Paragraph
-      text="Ifølge SSB vurderer seks av ti 80-åringer sin egen helse som god eller svært god. Dette er en positiv utvikling, men det betyr også at kapasitetskrisen vi står overfor i dag er barnemat sammenlignet med hva som vil møte oss de neste årene."
+      text="I 2040 vil det være dobbelt så mange i alderen 80 år og over. Ifølge SSB vurderer seks av ti 80-åringer sin egen helse som god eller svært god. Dette er en positiv utvikling, men det betyr også at kapasitetskrisen vi står overfor i dag er barnemat sammenlignet med hva som vil møte oss de neste årene. Hvem skal ta ansvar for dem som blir tvunget til å bo lenger hjemme?"
       wantBold
       c="myGreen"
     />
-    <Paragraph text="Det er allerede lite kapasitet i eldreomsorgen, og sykehjem beskrives som “minisykehus”. Dette er en skremmende utvikling. Målet videre er at flere skal kunne leve lengre hjemme, men i 2040 vil det være dobbelt så mange i alderen 80 år og over. Hvem skal ta ansvar for dem som blir tvunget til å bo lenger hjemme?" />
     <SimpleGrid
       cols={{
         xs: 1,

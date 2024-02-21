@@ -15,7 +15,7 @@ const PersonCard = ({ name, background, email, phone, linkedin, img }: PersonCar
     <Card.Section>
       <Image src={img} alt={name} width={100} height={400} radius="md" />
     </Card.Section>
-    <Text fw={500} mt="sm">
+    <Text fw={500} mt="sm" c="myGreen">
       {name}
     </Text>
     <Text fw={300} size="sm" c="dimmed">
