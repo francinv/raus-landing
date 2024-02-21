@@ -14,6 +14,7 @@ import { useForm } from '@mantine/form';
 import { useMemo } from 'react';
 import { notifications } from '@mantine/notifications';
 import { IconCheck, IconExclamationMark } from '@tabler/icons-react';
+import { useMediaQuery } from '@mantine/hooks';
 import { montserrat } from '@/theme';
 import { MUNICIPALITIES, TASKS } from '@/constants';
 import { SelectDeal } from '@/components';
@@ -22,6 +23,7 @@ import { generateGoogleSheetUrl } from '@/util';
 import { sendMail } from '@/app/actions';
 
 const Register = () => {
+  const isMobileScreen = useMediaQuery('(max-width: 768px)');
   const form = useForm<RegisterForm>({
     initialValues: {
       municipality: '',
@@ -38,7 +40,7 @@ const Register = () => {
   const hasOtherTasks = useMemo(() => form.values.tasks.includes('Annet'), [form.values.tasks]);
 
   return (
-    <Container id="register-section" size="lg">
+    <Container id="register-section" size="lg" pt={isMobileScreen ? 128 : 0}>
       <form
         onSubmit={form.onSubmit(async (values) => {
           try {
