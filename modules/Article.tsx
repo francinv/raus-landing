@@ -5,7 +5,7 @@ import { montserrat } from '@/theme';
 const Article = () => (
   <Container id="article-section" size="lg">
     <Title order={1} className={montserrat.className} mb="sm" c="myGreen">
-      Effektivitet trumfer menneskelig kontakt
+      La menneskelig kontakt trumfe effektivitet
     </Title>
     <Paragraph
       text="Som pårørende til en hjelpetrengende eldre forventer man gjerne at den lokale helsetjenesten tar ansvar for at den eldre får en meningsfull hverdag. Virkeligheten er langt mer kaotisk."

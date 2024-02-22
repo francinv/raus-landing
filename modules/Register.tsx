@@ -94,9 +94,9 @@ const Register = () => {
         <Title order={4} className={montserrat.className} c="myGreen">
           Informasjon
         </Title>
-        <Text size="sm" c="gray">
-          For å tilby best mulig hjelp, trenger vi litt informasjon om hvilken type hjelp dere
-          trenger.
+        <Text size="sm" c="dimmed">
+          Fyll ut skjemaet under for å registrere behov for assistanse. Du vil få tilsendt en e-post
+          med mer informasjon. Registreringen er ikke bindende.
         </Text>
         <SimpleGrid
           my="md"
