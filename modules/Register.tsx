@@ -16,10 +16,10 @@ import { notifications } from '@mantine/notifications';
 import { IconCheck, IconExclamationMark } from '@tabler/icons-react';
 import { useMediaQuery } from '@mantine/hooks';
 import { montserrat } from '@/theme';
-import { MUNICIPALITIES, TASKS } from '@/constants';
+import { MUNICIPALITIES, STATES, TASKS } from '@/constants';
 import { SelectDeal } from '@/components';
 import { RegisterForm } from '@/types';
-import { generateGoogleSheetUrl } from '@/util';
+import { generateGoogleSheetUrl, sortAlphabetically } from '@/util';
 import { sendMail } from '@/app/actions';
 
 const Register = () => {
@@ -34,6 +34,7 @@ const Register = () => {
       email: '',
       consent: true,
       amountOfTasks: 1,
+      state: '',
     },
   });
 
@@ -102,20 +103,33 @@ const Register = () => {
           my="md"
           cols={{
             xs: 1,
-            md: 2,
+            sm: 2,
+            md: 3,
           }}
         >
           <Autocomplete
-            label="Hvor er det behov for assistanse?"
-            data={MUNICIPALITIES}
+            label="I hvilket fylke er det behov for assistanse?"
+            data={sortAlphabetically(STATES)}
             required
             classNames={{
               input: montserrat.className,
               dropdown: montserrat.className,
             }}
-            placeholder="Velg kommune"
+            placeholder="Søk etter ditt fylke"
+            {...form.getInputProps('state')}
+          />
+          <Autocomplete
+            label="I hvilken kommune er det behov for assistanse?"
+            data={sortAlphabetically(MUNICIPALITIES)}
+            required
+            classNames={{
+              input: montserrat.className,
+              dropdown: montserrat.className,
+            }}
+            placeholder="Søk etter din kommune"
             {...form.getInputProps('municipality')}
           />
+
           <div>
             <MultiSelect
               label="Hva trenger dere hjelp til?"
