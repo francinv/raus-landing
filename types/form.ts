@@ -7,4 +7,5 @@ export interface RegisterForm {
   phone: string;
   consent: boolean;
   amountOfTasks: number;
+  state: string;
 }

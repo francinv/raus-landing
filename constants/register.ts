@@ -366,3 +366,21 @@ export const TASKS = [
   'Trening',
   'Annet',
 ];
+
+export const STATES = [
+  'Oslo',
+  'Rogaland',
+  'Møre og Romsdal',
+  'Nordland',
+  'Østfold',
+  'Akershus',
+  'Buskerud',
+  'Innlandet',
+  'Vestfold',
+  'Telemark',
+  'Agder',
+  'Vestland',
+  'Trøndelag',
+  'Troms',
+  'Finnmark',
+];
