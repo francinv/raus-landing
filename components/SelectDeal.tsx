@@ -9,7 +9,6 @@ interface SelectDealProps {
 }
 const SelectDeal = ({ onChange }: SelectDealProps) => {
   const [currentValue, setCurrentValue] = useState<number>(1);
-  const currentAmount = useMemo(() => currentValue * 249, [currentValue]);
 
   useEffect(() => {
     onChange(currentValue);
@@ -42,12 +41,12 @@ const SelectDeal = ({ onChange }: SelectDealProps) => {
           Pris per oppdrag:
         </Text>
         <Badge color="myGray" variant="filled" size="xl">
-          249 kr
+          249 kr / time
         </Badge>
       </Group>
       <Text size="sm" c="dimmed">
         Velg antall oppdrag du ønsker i måneden. Et oppdrag kan være alt fra å måke oppkjørselen til
-        å gå en tur.
+        å gå en tur. Endelig pris vil kalkuleres etter selve oppdraget er fullført.
       </Text>
       <Group mt="xl" justify="space-around" align="center">
         <ActionIcon onClick={onReduce} variant="filled" size="lg" disabled={currentValue === 1}>
@@ -59,12 +58,6 @@ const SelectDeal = ({ onChange }: SelectDealProps) => {
         <ActionIcon onClick={onIncrease} variant="filled" size="lg" disabled={currentValue === 10}>
           <IconPlus width="60%" height="60%" />
         </ActionIcon>
-      </Group>
-      <Group mt="md" justify="center" align="center">
-        <Text fw={500} size="xl">
-          Totalt:
-        </Text>
-        <Text size="xl">{currentAmount} kr</Text>
       </Group>
     </Card>
   );
