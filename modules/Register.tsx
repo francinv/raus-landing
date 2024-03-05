@@ -17,13 +17,11 @@ import { IconCheck, IconExclamationMark } from '@tabler/icons-react';
 import { useMediaQuery } from '@mantine/hooks';
 import { montserrat } from '@/theme';
 import { MUNICIPALITIES, STATES, TASKS } from '@/constants';
-import { SelectDeal } from '@/components';
 import { RegisterForm } from '@/types';
 import { generateGoogleSheetUrl, sortAlphabetically } from '@/util';
 import { sendMail } from '@/app/actions';
 
 const Register = () => {
-  const isMobileScreen = useMediaQuery('(max-width: 768px)');
   const form = useForm<RegisterForm>({
     initialValues: {
       municipality: '',
@@ -33,7 +31,6 @@ const Register = () => {
       phone: '',
       email: '',
       consent: true,
-      amountOfTasks: 1,
       state: '',
     },
   });
@@ -41,7 +38,7 @@ const Register = () => {
   const hasOtherTasks = useMemo(() => form.values.tasks.includes('Annet'), [form.values.tasks]);
 
   return (
-    <Container id="register-section" size="lg" pt={isMobileScreen ? 128 : 0}>
+    <Container id="register-section" size="lg">
       <form
         onSubmit={form.onSubmit(async (values) => {
           try {
@@ -77,23 +74,14 @@ const Register = () => {
         })}
       >
         <Title order={2} className={montserrat.className} c="myGreen">
-          Trenger din nærstående hjelp?
+          Har du behov for avlastning?
         </Title>
-        <Text my="sm">
-          Vi tilbyr tjenester til eldre som bor hjemme, men ikke er i stand til å utføre gjøremål de
-          har behov for å få gjort. Det kan være å måke oppkjørselen, gå en tur, kjøre på butikken
-          for å handle eller få et hyggelig besøk.
-        </Text>
         <Text fw={500} c="myGreen">
-          Dersom du er pårørende til noen som trenger en hjelpende hånd - REGISTRER DEG HER!
+          Dersom du er pårørende til noen som trenger en hjelpende hånd - registrer deg her!
         </Text>
         <Divider my="sm" />
         <Title order={4} className={montserrat.className} c="myGreen">
           Velg ønsket hjelp
-        </Title>
-        <SelectDeal onChange={(number) => form.setFieldValue('amountOfTasks', number)} />
-        <Title order={4} className={montserrat.className} c="myGreen">
-          Informasjon
         </Title>
         <Text size="sm" c="dimmed">
           Fyll ut skjemaet under for å registrere behov for assistanse. Du vil få tilsendt en e-post

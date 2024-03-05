@@ -6,6 +6,5 @@ export interface RegisterForm {
   otherTasks: string;
   phone: string;
   consent: boolean;
-  amountOfTasks: number;
   state: string;
 }

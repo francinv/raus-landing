@@ -10,7 +10,6 @@ const parseWantedTasks = (tasks: string[]) =>
 const stripSpaces = (str: string) => str.replace(/\s/g, '+');
 
 export const generateGoogleSheetUrl = (form: RegisterForm) => {
-  const amount = `&entry.2050866611=${form.amountOfTasks}`;
   const state = `&entry.498957113=${form.state}`;
   const municipality = `&entry.577097576=${form.municipality}`;
   const tasks = parseWantedTasks(removeOtherTasks(form.tasks));
@@ -24,5 +23,5 @@ export const generateGoogleSheetUrl = (form: RegisterForm) => {
   const phone = `&entry.1400575833=${form.phone}`;
   const email = `&entry.559193587=${form.email}`;
 
-  return `${baseUrl}${amount}${state}${municipality}${tasks}${otherTasks}${name}${phone}${email}`;
+  return `${baseUrl}${state}${municipality}${tasks}${otherTasks}${name}${phone}${email}`;
 };
