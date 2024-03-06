@@ -1,4 +1,14 @@
-import { Container, Blockquote, Title, Image, SimpleGrid } from '@mantine/core';
+import {
+  Container,
+  Blockquote,
+  Title,
+  Image,
+  SimpleGrid,
+  Card,
+  Text,
+  Button,
+  Stack,
+} from '@mantine/core';
 import { Paragraph } from '@/components';
 import { montserrat } from '@/theme';
 
@@ -13,7 +23,30 @@ const Article = () => (
       c="myGreen"
     />
     <Paragraph text="En arbeidshverdag i eldreomsorgen domineres av en uendelig liste med gjøremål og et umenneskelig tidspress. De ansatte står på for å komme gjennom dagens gjøremål, men sliter likevel med å få det til å gå rundt." />
-    <Paragraph text="Vi er Raus, et team på NTNUs Entreprenørskole som har dykket ned i problematikk knyttet til eldreomsorgen. Vi har tilegnet oss større forståelse for dagens omstendigheter gjennom å hospitere hos hjemmetjenester og sykehjem i Trondheim. Videre har vi gjennomført hundrevis av dybdeintervju med eldre, pårørende og pleiere, i tillegg til offentlige og private aktører." />
+    <SimpleGrid
+      cols={{
+        xs: 2,
+      }}
+      my="sm"
+    >
+      <Text>
+        Vi er Raus, et team på NTNUs Entreprenørskole som har dykket ned i problematikk knyttet til
+        eldreomsorgen. Vi har tilegnet oss større forståelse for dagens omstendigheter gjennom å
+        hospitere hos hjemmetjenester og sykehjem i Trondheim. Videre har vi gjennomført hundrevis
+        av dybdeintervju med eldre, pårørende og pleiere, i tillegg til offentlige og private
+        aktører.
+      </Text>
+      <Card shadow="sm" padding="lg" radius="md" withBorder style={{ justifyContent: 'center' }}>
+        <Stack align="stretch" justify="center">
+          <Text fw={700} c="myGreen" style={{ textAlign: 'center' }}>
+            Dersom du er pårørende til noen som trenger en hjelpende hånd - registrer deg nå!
+          </Text>
+          <Button component="a" variant="filled" href="#register-section">
+            Registrer deg nå
+          </Button>
+        </Stack>
+      </Card>
+    </SimpleGrid>
     <Paragraph
       text="Det vi har observert har rystet vår forståelse av eldreomsorgen i dag - der effektivitet trumfer menneskelig kontakt."
       wantBold

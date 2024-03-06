@@ -1,7 +1,7 @@
 'use client';
 
 import { ActionIcon, Badge, Card, Group, Text } from '@mantine/core';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IconMinus, IconPlus } from '@tabler/icons-react';
 
 interface SelectDealProps {
