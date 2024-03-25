@@ -48,6 +48,9 @@ export async function sendMail(user: MailUser) {
 
   await mailer
     .send(msg)
-    .then(() => console.log('Mail sent'))
+    .then((res) => {
+      console.log('Mail sent');
+      console.log('Response: ', res);
+    })
     .catch(() => 'Mail failed to send');
 }
